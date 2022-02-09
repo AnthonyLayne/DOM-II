@@ -3,9 +3,6 @@ import "./less/index.less";
 // Your code goes here!
 
 const navBar = document.querySelector("nav");
-const logo = document.querySelector("logo-heading");
-const introImg = document.querySelector("intro img");
-const contentDest = document.querySelector("content-destination h2");
 
 //focusin/focusout-turns lightblue when clicked on, when clicked off turns green.
 
@@ -28,14 +25,18 @@ function logKey(key) {
   console.log(`${key.code}`);
 }
 
+//Prevent Default
 Array.from(document.links).forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
   });
 });
-//wheel
 
-//load
+//Load- gives a message upon loading the website.
+
+window.addEventListener("load", () => {
+  alert("Have a nice vacation!");
+});
 
 //resize
 
